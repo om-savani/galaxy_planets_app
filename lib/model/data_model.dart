@@ -27,6 +27,7 @@ class Planet {
   final bool hasRings;
   final String description;
   final String averageOrbitalSpeed;
+  final String orbitalPeriod;
   final String image;
   final String surfaceArea;
   final String rotationPeriod;
@@ -44,6 +45,7 @@ class Planet {
     required this.hasRings,
     required this.description,
     required this.averageOrbitalSpeed,
+    required this.orbitalPeriod,
     required this.image,
     required this.surfaceArea,
     required this.rotationPeriod,
@@ -63,6 +65,7 @@ class Planet {
       hasRings: json['hasRings'] ?? false,
       description: json['description'] ?? 'No description available',
       averageOrbitalSpeed: json['averageOrbitalSpeed'] ?? 'Unknown',
+      orbitalPeriod: json['orbitalPeriod'] ?? 'Unknown',
       image: json['image'] ?? '',
       surfaceArea: json['surfaceArea'] ?? 'Unknown',
       rotationPeriod: json['rotationPeriod'] ?? 'Unknown',

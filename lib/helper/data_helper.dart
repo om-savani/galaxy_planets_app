@@ -18,6 +18,7 @@ class DataHelper {
                 hasRings: e['hasRings'] ?? false,
                 description: e['description'] ?? 'No description available',
                 averageOrbitalSpeed: e['averageOrbitalSpeed'] ?? 'Unknown',
+                orbitalPeriod: e['orbitalPeriod'] ?? 'Unknown',
                 image: e['image'] ?? 'default_image.png',
                 surfaceArea: e['surfaceArea'] ?? 'Unknown',
                 rotationPeriod: e['rotationPeriod'] ?? 'Unknown',

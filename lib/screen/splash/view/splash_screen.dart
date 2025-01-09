@@ -61,39 +61,34 @@ class _SplashScreenState extends State<SplashScreen>
               ),
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 20.0),
-            child: Align(
-              alignment: Alignment.bottomLeft,
-              child: FadeTransition(
-                opacity: animation,
-                child: Column(
-                  mainAxisSize: MainAxisSize.min,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      'EXPLORE',
-                      style: GoogleFonts.lato(
-                        fontSize: 40,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.white,
-                        letterSpacing: 2,
-                      ),
-                    ),
-                    Text(
-                      'SOLAR SYSTEM',
-                      style: GoogleFonts.lato(
-                        fontSize: 35,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.white,
-                        letterSpacing: 2,
-                      ),
-                    ),
-                  ],
-                ),
+          Positioned(
+            left: 20,
+            right: 20,
+            bottom: 40,
+            child: FadeTransition(
+              opacity: animation,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  RichText(
+                      text: const TextSpan(
+                          style: TextStyle(
+                              fontFamily: 'Montserrat',
+                              color: Colors.white,
+                              fontSize: 52,
+                              fontWeight: FontWeight.normal),
+                          children: [
+                        TextSpan(
+                          text: 'EXPLORE ',
+                        ),
+                        TextSpan(
+                            text: 'SOLAR SYSTEM',
+                            style: TextStyle(fontWeight: FontWeight.bold)),
+                      ])),
+                ],
               ),
             ),
-          ),
+          )
         ],
       ),
     );
